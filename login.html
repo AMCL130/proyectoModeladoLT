@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+    <!-- Google web Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/product.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="/css/cssLogin.css">
+
+
+    <title>Login</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand p-0">
+            <img src="img/logoLT.png" alt="">
+            <!-- <img src="img/logo.png" alt="Logo"> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="dashboard.html" class="nav-item nav-link">Dashboard</a>
+                <a href="clientes.html" class="nav-item nav-link">Cliente</a>
+                <a href="listarEventos.html" class="nav-item nav-link">Eventos</a>
+                <a href="listarVentas.html" class="nav-item nav-link">Ventas</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Configuracion</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="usuarios.html" class="dropdown-item">Usuarios</a>
+                        <a href="roles.html" class="dropdown-item">Roles</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Productos y Servicios</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="categoria.html" class="dropdown-item">Categorias</a>
+                        <a href="paquete.html" class="dropdown-item">Paquetes</a>
+                        <a href="servicio.html" class="dropdown-item">Servicios</a>
+                        <a href="producto.html" class="dropdown-item">Productos</a>
+                        <a href="platos.html" class="dropdown-item">Platos</a>
+                        <a href="ingredientes.html" class="dropdown-item">Ingredientes</a>
+                    </div>
+                </div>
+
+                <a href="carrito.html" class="nav-item nav-link"><span
+                        class="material-symbols-outlined">shopping_cart</span></a>
+
+            </div>
+            <a href="login.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
+        </div>
+    </nav>
+
+
+
+
+    <main>
+        <div class="container-form register">
+            <div class="information">
+                <div class="info-childs">
+                    <h2>Bienvenido a Decoraciones Lina Tabares</h2>
+                    <p>Puedes iniciar sesion si ya cuentas con una si no registrate</p>
+                    <input type="button" value="Iniciar Sesión" id="sign-in">
+                    <p>Vuelve al Inicio si Deseas</p>
+                    <input type="submit" value="Inicio" onclick="redirectToHome()">
+                </div>
+            </div>
+            <div class="form-information">
+                <div class="form-information-childs">
+                    <h2>Registrarse</h2>
+                    <div class="icons">
+                        <i class='bx bxl-google'></i>
+                        <i class='bx bxl-facebook-circle'></i>
+                        <i class='bx bxl-twitter'></i>
+                    </div>
+                    <p>o usa tu email para registrarte</p>
+                    <form class="form" id="msformRegistro">
+                        <label>
+                            <i class='bx bxs-user'></i>
+                            <select class="styled-select">
+                                <option value="" disabled selected>Selecione Documento</option>
+                                <option value="1">C.C</option>
+                                <option value="2">C.E</option>
+                                <option value="3">T.I</option>
+                            </select>
+                        </label>
+                        <label>
+                            <i class='bx bxs-user'></i>
+                            <input type="numer" id="documentoRegistro" placeholder="Documento">
+                        </label>
+                        <label>
+                            <i class='bx bxs-user'></i>
+                            <input type="text" id="nombreRegistro" placeholder="Nombres Completos">
+                        </label>
+                        <label>
+                            <i class='bx bxs-phone'></i>
+                            <input type="tel" id="telefonoRegistro" placeholder="Telefono Celular">
+                        </label>
+                        <label>
+                            <i class='bx bxs-envelope'></i>
+                            <input type="email" id="correoRegistro" placeholder="Correo Electronico">
+                        </label>
+                        <label>
+                            <i class='bx bxs-lock-alt'></i>
+                            <input type="password" id="contrasenaRegistro" placeholder="Ingrese Contraseña">
+                        </label>
+                        <label>
+                            <i class='bx bxs-lock-alt'></i>
+                            <input type="password" id="confirmarRegistro" placeholder="Confirmar Contraseña">
+                        </label>
+                        <input type="submit" value="Registrarse">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-form login hide">
+            <div class="information">
+                <div class="info-childs">
+                    <h2>Bienvenido Decoraciones Lina Tabares</h2>
+                    <p>Puedes Registrarte si aun no cuentas con una</p>
+                    <input type="button" value="Registrarse" id="sign-up">
+                </div>
+            </div>
+            <div class="form-information">
+                <div class="form-information-childs">
+                    <h2>Iniciar Sesión</h2>
+                    <div class="icons">
+                        <i class='bx bxl-google'></i>
+                        <i class='bx bxl-facebook-circle'></i>
+                        <i class='bx bxl-twitter'></i>
+                    </div>
+                    <p>Iniciar Sesión con una Cuenta</p>
+                    <form class="form" id="msform">
+                        <label>
+                            <i class='bx bxs-envelope'></i>
+                            <input type="number" id="documento" placeholder="Numero Documento">
+                        </label>
+                        <label>
+                            <i class='bx bxs-lock-alt'></i>
+                            <input type="password" id="contrasena" placeholder="Ingrese Contraseña">
+                        </label>
+                        <input type="submit" value="Iniciar Sesión">
+                        <input type="button" value="Recuperar Contraseña" id="btnRecuperar">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-form recuperar hide">
+            <div class="information">
+                <div class="info-childs">
+                    <h2>Bienvenido a Decoraciones Lina Tabares</h2>
+                    <p>Puedes iniciar sesion si ya cuentas con una si no registrate</p>
+                    <input type="button" value="Iniciar Sesión" id="recuperar-iniciar">
+                </div>
+            </div>
+            <div class="form-information">
+                <div class="form-information-childs">
+                    <h2>Iniciar Sesión</h2>
+                    <div class="icons">
+                        <i class='bx bxl-google'></i>
+                        <i class='bx bxl-facebook-circle'></i>
+                        <i class='bx bxl-twitter'></i>
+                    </div>
+                    <h2>¿No puedes iniciar sesión?</h2>
+                    <p>Para restablecer la clave,
+                        ingresa Los Siguientes Datos.</p>
+                    <form class="form" id="msformRecuperar">
+                        <label>
+                            <i class='bx bxs-envelope'></i>
+                            <input type="number" id="documentoRecuperar" placeholder="Numero Documento">
+                        </label>
+                        <input type="submit" value="Recuperar Contraseña">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>1010 Avenue, sw 54321, chandigarh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>9876543210 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>mail@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="img/logoLT.png" class="img-fluid" alt="logo"></a>
+                            </div>
+
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="/js/scriptLogin.js"></script>
+</body>
+
+</html>
